@@ -17,6 +17,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
         <quarkus.platform.version>3.6.6</quarkus.platform.version>
+        <okta-jwt.version>0.5.8</okta-jwt.version>
         <surefire-plugin.version>3.1.2</surefire-plugin.version>
     </properties>
     <dependencyManagement>
@@ -34,6 +35,17 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-amazon-lambda</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.okta.jwt</groupId>
+            <artifactId>okta-jwt-verifier</artifactId>
+            <version>${okta-jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.okta.jwt</groupId>
+            <artifactId>okta-jwt-verifier-impl</artifactId>
+            <version>${okta-jwt.version}</version>
+<!--            <scope>runtime</scope>-->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

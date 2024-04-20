@@ -86,6 +86,13 @@ public class AuthPolicy {
         this.policyDocumentObject = policyDocumentObject;
     }
 
+
+    public Context getContext() {
+        return context;
+    }
+    public void setContext(Context context) {
+        this.context = context;
+    }
     /**
      * PolicyDocument represents an IAM Policy, specifically for the execute-api:Invoke action
      * in the context of a API Gateway Authorizer
