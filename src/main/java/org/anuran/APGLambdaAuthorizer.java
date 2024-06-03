@@ -58,8 +58,11 @@ public class APGLambdaAuthorizer implements RequestHandler<TokenAuthorizerContex
 
         AuthPolicy ap = null;
         logger.info("resource path is {}, httpMethod is {}", resourcePath, httpMethod);
-        if (resourcePath.startsWith("blog/api/comments") //|| resource.startsWith("course/api/tags"))
-                && AuthPolicy.HttpMethod.POST.toString().equalsIgnoreCase(httpMethod)) { //For routes
+        if ((resourcePath.startsWith("securednotes/api/comments")
+                || resourcePath.startsWith("securednotes/api/nested-comments"))
+                //|| resource.startsWith("course/api/tags"))
+                && (AuthPolicy.HttpMethod.POST.toString().equalsIgnoreCase(httpMethod)
+                || AuthPolicy.HttpMethod.GET.toString().equalsIgnoreCase(httpMethod))) { //For routes
             // allowed without valid token
 
             // the example policy below allows access to one resource in the RestApi
