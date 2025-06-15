@@ -78,8 +78,8 @@ public class APGLambdaAuthorizer implements RequestHandler<TokenAuthorizerContex
             // 3. Lookup in a self-managed DB
 
             AccessTokenVerifier jwtVerifier = JwtVerifiers.accessTokenVerifierBuilder()
-                    .setIssuer("https://dev-76789052.okta.com/oauth2/auselj90dmLJUlb5z5d7")
-                    .setAudience("api://jwtauthtest")   // defaults to 'api://default'
+                    .setIssuer("https://trial-6477607.okta.com/oauth2/auss9ckb0xvJJGGo3697")
+                    .setAudience("api://lngdev")   // defaults to 'api://default'
                     .setConnectionTimeout(Duration.ofSeconds(15))    // defaults to 1s
 //                .setRetryMaxAttempts(2)                     // defaults to 2
 //                .setRetryMaxElapsed(Duration.ofSeconds(10))     // defaults to 10s
